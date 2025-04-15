@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
 
 export const ExpensesTable = ({ expenses }) => {
@@ -28,6 +29,9 @@ export const ExpensesTable = ({ expenses }) => {
                   <td>{expense.category}</td>
                   <td>${parseFloat(expense.amount).toFixed(2)}</td>
                   <td>{expense.date}</td>
+                  <td>
+                    <DeleteButton onClick={() => onDEleteExpense(index)} />
+                  </td>
                 </tr>
               ))
             )}
